@@ -10,7 +10,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>controllerServlet</servlet-name>
-        <url-pattern>/controllerServlet</url-pattern>
+        <url-pattern>/checkPoints</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -19,6 +19,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>areaCheckServlet</servlet-name>
-        <url-pattern>/areaCheckServlet</url-pattern>
+        <url-pattern>/areaCheck</url-pattern>
     </servlet-mapping>
 </web-app>

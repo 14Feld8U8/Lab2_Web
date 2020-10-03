@@ -4,7 +4,7 @@
 <%
     String title = "Лабораторная работа №2<br>по Веб-программированию<br>";
     String titleClass = "class=\"main_title column\"";
-    if (request.getAttribute("title") != null){
+    if (request.getAttribute("title") != null) {
         title = request.getAttribute("title").toString();
         titleClass = "class=\"main_title column error_title\"";
     }
@@ -46,11 +46,11 @@
         <div class="main_content">
             <h1>Попадёт ли точка на плоскости в заданную область?</h1>
             <div class="content_row">
-                <div class="column">
-                    <img src="images/areas.png" width="80%" alt="areas">
+                <div id="visualization_container" class="column">
+                    <canvas width="320px" height="320px" id="areas"></canvas>
                 </div>
                 <div class="column">
-                    <form method="get" action="controllerServlet" name="sendForm" class="send_form">
+                    <form method="get" action="checkPoints" name="sendForm" class="send_form">
                         <div class="x_block coordinate_block">
                             <label for="x_select">X: </label>
                             <select id="x_select" name="coordinate_x">
@@ -107,11 +107,11 @@
                                 for (TableRow tableRow : tableRows) {
                         %>
                         <tr>
-                            <td><%= tableRow.getX() %>
+                            <td class="x_cell"><%= tableRow.getX() %>
                             </td>
-                            <td><%= tableRow.getY() %>
+                            <td class="y_cell"><%= tableRow.getY() %>
                             </td>
-                            <td><%= tableRow.getR() %>
+                            <td class="r_cell"><%= tableRow.getR() %>
                             </td>
                             <td><%= tableRow.getCurrentTime() %>
                             </td>
@@ -133,6 +133,7 @@
         </div>
     </footer>
 </div>
-<script src="validation.js"></script>
+<script src="js/form.js"></script>
+<script src="js/visualization.js"></script>
 </body>
 </html>

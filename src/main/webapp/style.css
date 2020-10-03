@@ -142,6 +142,20 @@ header .made_by {
     border-radius: 10%;
 }
 
+#areas {
+    background: url("images/areas.png") center no-repeat;
+    background-size: contain;
+}
+
+#visualization_container {
+    transition-duration: 1000ms;
+}
+
+#visualization_container.input_err {
+    border-color: #94002D;
+    box-shadow: 4px 4px 4px #E40045, -4px -4px 4px #E40045, 4px -4px 4px #E40045, -4px 4px 4px #E40045;
+}
+
 .send_form {
     padding: 50px 0;
     display: inline-block;
@@ -220,7 +234,6 @@ header .made_by {
     background-color: #E40045;
     border-color: #94002D;
     box-shadow: 0 4px 4px #94002D;
-
 }
 
 .sel {

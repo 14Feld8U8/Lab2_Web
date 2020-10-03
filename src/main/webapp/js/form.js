@@ -24,11 +24,12 @@ function checkY() {
 
 function checkR() {
     let buttons = document.querySelectorAll(".r_button");
-    if (r.value === undefined) {
+    if (r.value === "") {
         buttons.forEach(button => button.classList.add("input_err"));
         return false;
     }
     buttons.forEach(button => button.classList.remove("input_err"));
+    canvasContainer.classList.remove("input_err");
     return true;
 }
 
@@ -42,7 +43,7 @@ function changeR(rValue) {
         button.classList.add("sel");
         checkR();
     } else {
-        r.value = undefined;
+        r.value = "";
         button.classList.remove("sel");
     }
 }
